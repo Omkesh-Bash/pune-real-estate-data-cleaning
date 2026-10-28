@@ -26,6 +26,21 @@ SELECT c.*,
 	)	AS listing_percentage
 FROM count_per_tier c 
 CROSS JOIN (SELECT COUNT(*) AS t_cnt FROM property_listings ) s
-
-
 ;
+
+
+
+-- compare the price tiers by their typical listing prices.
+SELECT 
+	pl."Price_Tier",
+	COUNT(*) AS listing_count,
+	ROUND(AVG("Price") :: NUMERIC, 2) AS avg_price,
+	PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY "Price") AS median_price,
+	MIN("Price") AS min_price,
+	MAX("Price") AS max_price
+FROM property_listings pl 
+GROUP BY "Price_Tier"
+ORDER BY "Price_Tier" 
+;
+
+--
