@@ -88,3 +88,7 @@ SELECT
 	"Super_Area"
 FROM property_listings
 ORDER BY "Price" DESC;
+
+
+-- Pune_Real_Estate_Master_Data --
+SELECT * FROM property_listings pl ;
