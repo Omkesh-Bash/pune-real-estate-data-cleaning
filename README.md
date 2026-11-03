@@ -2,11 +2,65 @@
 
 A focused analytics project on advertised property listings for sale in Pune. It uses Python and pandas to clean and enrich listing data, PostgreSQL and SQL to investigate pricing and listing characteristics, and Looker Studio to present the results interactively.
 
+## Project navigation
+
+| Resource | Description |
+| --- | --- |
+| [Dashboard](https://datastudio.google.com/reporting/05a8e70b-1d24-484e-b707-717e11fc982d) | Open the Looker Studio dashboard |
+| [Data guide](data/README.md) | Understand the raw, cleaned, and generated data folders |
+| [SQL guide](sql/README.md) | Follow the PostgreSQL setup and analysis workflow |
+| [Cleaning notebook](notebooks/Pune_Real_Estate_Data_Cleaning.ipynb) | Review the cleaning and feature-engineering work |
+
+## Contents
+
+- [Dashboard](#dashboard)
+- [Problem and objective](#problem-and-objective)
+- [Dataset](#dataset)
+- [Workflow](#workflow)
+- [Cleaning and feature engineering](#cleaning-and-feature-engineering)
+- [SQL analysis](#sql-analysis)
+- [Key insights](#key-insights)
+- [Dashboard contents](#dashboard-contents)
+- [Technology](#technology)
+- [Repository structure](#repository-structure)
+- [How to explore or reproduce](#how-to-explore-or-reproduce)
+- [Limitations](#limitations)
+
 ## Dashboard
 
 The Looker Studio dashboard is available here: **[Open the Pune Real Estate Analytics Dashboard](https://datastudio.google.com/reporting/05a8e70b-1d24-484e-b707-717e11fc982d)**
 
 Access may depend on the dashboard’s sharing settings.
+
+## Dashboard preview
+
+The screenshots below are arranged in the same order as the dashboard walkthrough: first the default view, then the available filters, and finally examples of the dashboard after filters have been applied. Click any image to open it at full size.
+
+### Without filters
+
+![Dashboard overview without filters](assets/images/dashboard-overview.png)
+
+![Dashboard summary without filters](assets/images/dashboard-summary-no-filters.png)
+
+![Dashboard listing table without filters](assets/images/dashboard-listing-table-no-filters.png)
+
+### Available filters
+
+<table>
+  <tr>
+    <td><a href="assets/images/dashboard-filter-locality.png"><img src="assets/images/dashboard-filter-locality.png" alt="Locality filter" width="32%"></a></td>
+    <td><a href="assets/images/dashboard-filter-BHK.png"><img src="assets/images/dashboard-filter-BHK.png" alt="Price-tier filter" width="32%"></a></td>
+    <td><a href="assets/images/dashboard-filter-property-type.png"><img src="assets/images/dashboard-filter-property-type.png" alt="Property-type filter" width="32%"></a></td>
+  </tr>
+</table>
+
+### With filters applied
+
+![Filtered dashboard summary](assets/images/dashboard-filtered-summary.png)
+
+![Filtered dashboard charts](assets/images/dashboard-filtered-charts.png)
+
+![Filtered dashboard listing table](assets/images/dashboard-filtered-listing-table.png)
 
 ## Problem and objective
 
@@ -89,11 +143,17 @@ Two source listings have the same values across the fields shown in the dashboar
 
 ```text
 .
+├── assets/
+│   └── images/
+│       └── .gitkeep
 ├── data/
 │   ├── cleaned/
 │   │   └── clean_rent_data.csv
-│   └── raw/
-│       └── scrapped_data.csv
+│   ├── exports/
+│   │   └── .gitkeep
+│   ├── raw/
+│   │   └── scrapped_data.csv
+│   └── README.md
 ├── notebooks/
 │   └── Pune_Real_Estate_Data_Cleaning.ipynb
 ├── sql/
@@ -102,7 +162,8 @@ Two source listings have the same values across the fields shown in the dashboar
 │   ├── 03_locality_analysis.sql
 │   ├── 04_price_tier_analysis.sql
 │   ├── 05_outlier_analysis.sql
-│   └── 06_dashboard_views.sql
+│   ├── 06_dashboard_views.sql
+│   └── README.md
 └── README.md
 ```
 
