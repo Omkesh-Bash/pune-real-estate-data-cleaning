@@ -48,9 +48,11 @@ The screenshots below are arranged in the same order as the dashboard walkthroug
 
 <table>
   <tr>
-    <td><a href="assets/images/dashboard-filter-locality.png"><img src="assets/images/dashboard-filter-locality.png" alt="Locality filter" width="32%"></a></td>
-    <td><a href="assets/images/dashboard-filter-BHK.png"><img src="assets/images/dashboard-filter-BHK.png" alt="Price-tier filter" width="32%"></a></td>
-    <td><a href="assets/images/dashboard-filter-property-type.png"><img src="assets/images/dashboard-filter-property-type.png" alt="Property-type filter" width="32%"></a></td>
+    <td width="50%"><a href="assets/images/dashboard-filter-locality.png"><img src="assets/images/dashboard-filter-locality.png" alt="Locality filter" width="100%"></a></td>
+    <td width="50%"><a href="assets/images/dashboard-filter-BHK.png"><img src="assets/images/dashboard-filter-BHK.png" alt="BHK filter" width="100%"></a></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><a href="assets/images/dashboard-filter-property-type.png"><img src="assets/images/dashboard-filter-property-type.png" alt="Property-type filter" width="50%"></a></td>
   </tr>
 </table>
 
